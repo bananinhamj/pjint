@@ -1,35 +1,94 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #40d406;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  width: 8rem;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.form-item {
+  position: relative;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+input:focus::-webkit-input-placeholder {
+  visibility: hidden;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+input:focus,
+input:not(empty) {
+  border: 1px solid rgb(56, 255, 30);
+  border-radius: 3px;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+label {
+  display: none;
+  font-size: 11px;
+  color: rgb(75, 255, 30);
+  font-family: sans-serif;
+  background-color: #fff;
+  padding: 0 3px;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+select:focus + label,
+select:not(:placeholder-shown) + label {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  top: -5px;
+}
+
+select:focus + label {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  top: -5px;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0 0.6rem;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  min-height: 2rem;
+}
+
+select {
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1rem;
+  padding: 0 0.6rem;
+  width: 100%;
+  min-height: 2rem;
+}
+
+input,
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
