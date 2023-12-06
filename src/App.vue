@@ -4,10 +4,21 @@ import HeaderComp from '@/components/template/HeaderComp.vue'
 
 <template>
   <HeaderComp />
-  <h1>Arco íris</h1>
+  <div class="logo">
+      <h1><img src=""></h1>
+  </div>
   <main>
     <RouterView />
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .logo{
+    text-align: center;
+    width: 14px;
+    height:5px;
+    margin: 10px;
+    padding: 5px;
+  }
+
+</style>

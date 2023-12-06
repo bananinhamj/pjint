@@ -24,16 +24,19 @@ async function login() {
     alert('Usuário ou senha inválidos')
   }
 }
+
 </script>
 
 <template>
   <header>
     <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/classificacao">Classe</RouterLink>
-      <RouterLink to="/produtos">Produtos</RouterLink>
-      <a v-if="authStore.loggedIn" @click="authStore.logout()">Logout</a>
-      <a v-else @click="showForm = true">Login</a>
+      <div class="elemento-sombreado">
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/classificacao">Classe</RouterLink>
+        <RouterLink to="/produtos">Produtos</RouterLink>
+        <a v-if="authStore.loggedIn" @click="authStore.logout()">Logout</a>
+        <a v-else @click="showForm = true">Login</a>
+      </div> 
     </nav>
   </header>
   <modal :visible="showForm" @close="showForm = false">
@@ -115,5 +118,12 @@ nav a:first-of-type {
   flex-direction: column;
   margin-bottom: 1rem;
   row-gap: 0.5rem;
+}
+.elemento-sombreado {
+  width: 1580px; /* Ajuste conforme necessário */
+  height: 100px; /* Ajuste conforme necessário */
+  background-color: #fff; /* Cor de fundo do elemento */
+  border-radius: 8px; /* Borda arredondada (opcional) */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 </style>
