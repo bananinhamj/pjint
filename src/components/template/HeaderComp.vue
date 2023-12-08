@@ -31,8 +31,8 @@ async function login() {
   <header>
     <nav>
       <div class="elemento-sombreado">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/classificacao">Classe</RouterLink>
+        <RouterLink to="/home">Home</RouterLink>
+        <RouterLink to="/categoria">Categoria</RouterLink>
         <RouterLink to="/produtos">Produtos</RouterLink>
         <a v-if="authStore.loggedIn" @click="authStore.logout()">Logout</a>
         <a v-else @click="showForm = true">Login</a>
