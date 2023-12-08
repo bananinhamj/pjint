@@ -1,9 +1,9 @@
 <script>
 export default {
     props: {
-      poster: String,
-      titulo: String,
-      LinkFilme: {
+      imagem: String,
+      nome: String,
+      LinkProduto: {
         type: Object,
       },
     },
@@ -15,13 +15,13 @@ export default {
   };</script>
 <template>
     <div class="container">
-        <img class="cardproduto" :src="poster" />
+        <img class="cardproduto" src="https://code.visualstudio.com/assets/images/home-git.svg" />
         <div>
             <div class="overlay">
-                <h4 class="Produto">{{ titulo }}</h4>
-                <router-link :to="UrlDoProduto(LinkProduto.id)">
+                <h4 class="Produto">aaaaaaaaa</h4>
                 <button>VER MAIS</button>
-                </router-link>
+<!--                 <router-link :to="UrlDoProduto(LinkProduto.id)">
+                </router-link> -->
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 import api from '../plugins/api'
 
 class CarneService {
-  async getAllProdutos(){
+  async getAllCarne(){
     const response = await api.get('/carnes/')
     return response.data
   }

@@ -120,7 +120,7 @@ nav a:first-of-type {
   row-gap: 0.5rem;
 }
 .elemento-sombreado {
-  width: 1580px; /* Ajuste conforme necessário */
+  width: 1830px; /* Ajuste conforme necessário */
   height: 100px; /* Ajuste conforme necessário */
   background-color: #fff; /* Cor de fundo do elemento */
   border-radius: 8px; /* Borda arredondada (opcional) */

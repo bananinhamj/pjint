@@ -1,8 +1,9 @@
 <script setup>
+  import CardCarne from '../components/Cards/CardCarne.vue';
 </script>
 
 <template>
-  <h1>Em breve</h1>
+  <CardCarne />  
 </template>
 
 <style scoped></style>
