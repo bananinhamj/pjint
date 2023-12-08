@@ -5,7 +5,7 @@ class FrutaService {
     const response = await api.get('/frutas/')
     return response.data
   }
-  async saveMovie(fruta) {
+  async saveFruta(fruta) {
     let response
     if (fruta.id) {
       response = await api.put(`/frutas${fruta.id}/`, fruta)

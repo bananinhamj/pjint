@@ -1,26 +1,26 @@
 <!-- eslint-disable no-undef -->
 <script setup>
 import { ref, onMounted } from 'vue'
-import carneService from '@/services/carne.js'
+import bebidaService from '@/services/bebidas.js'
 
-const carnes = ref([])
+const bebidas = ref([])
 
 onMounted(async () => {
-  const data = await carneService.getAllCarnes()
-  carnes.value = data
+  const data = await bebidaService.getAllBebidas()
+  bebidas.value = data
 })
 </script>
 
 <template>
   <div class="row wrap">
-    <div v-for="carne in carnes" :key="carne.id" class="card">
-      <img :src="carne.capa.url" :alt="carne" />
-      <div class="carne-detail">
-        <h3>{{ carne.description }}</h3>
+    <div v-for="bebida in bebidas" :key="bebida.id" class="card">
+      <img :src="bebida.capa.url" :alt="bebida" />
+      <div class="bebida-detail">
+        <h3>{{ bebida.description }}</h3>
         <div class="descricao">
-          <p>{{ carne.nome }}</p>
+          <p>{{ bebida.nome }}</p>
         </div>
-        <p>R$ {{  carne.preco }}</p>
+        <p>R$ {{  bebida.preco }}</p>
       </div>
     </div>
   </div>
