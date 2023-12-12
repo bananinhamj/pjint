@@ -11,8 +11,8 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/classificacao',
-      name: 'classificacao',
+      path: '/cadastro',
+      name: 'classificacao',  
       component: ClassificacaoView
     },
     {

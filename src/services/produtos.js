@@ -5,7 +5,7 @@ class ProdutoService {
     const response = await api.get('/produtos/')
     return response.data
   }
-  async saveMovie(produto) {
+  async saveProduto(produto) {
     let response
     if (produto.id) {
       response = await api.put(`/produtos/${produto.id}/`, produto)

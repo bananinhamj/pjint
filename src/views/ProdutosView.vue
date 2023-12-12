@@ -13,7 +13,7 @@
     const data = await frutaService.getAllFrutas()
     frutas.value = data
     
-  },)
+  },)     
   
   const bebidas = ref([])
     onMounted(async () => {

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'  
-import MovieList from '@/components/ProdutosList.vue'
+import ProdutosList from '@/components/ProdutosList.vue'
 import Modal from '@/components/template/Modal.vue'
 
 import categoriaService from '@/services/categoria.js'
@@ -51,7 +51,7 @@ const showForm = ref(false)
       Adicionar
     </button>
   </div>
-  <MovieList />
+  <ProdutosList />
   <modal :visible="showForm" @close="showForm = false">
     <template #header>
       <h3>Cadastro de Produtos</h3>
@@ -67,7 +67,7 @@ const showForm = ref(false)
           </div>
         </div>
         <div class="form-item">
-          <input type="text" placeholder="Nome" id="nome" v-model="currentMovie.title" />
+          <input type="text" placeholder="Nome" id="nome" v-model="currentProduto.title" />
           <label for="title">Nome</label>
         </div>
         <div class="form-item">
@@ -78,15 +78,6 @@ const showForm = ref(false)
             v-model="currentProduto.year"
           />
           <label for="year">Preço</label>
-        </div>
-        <div class="form-item">
-          <select v-model="currentProduto.marca">
-            <option disabled value="">Selecione Marca</option>
-            <option v-for="marca in marcas" :key="marca.id" :value="marca.id">
-              {{ marca.nome }}
-            </option>
-          </select>
-          <label for="year">Marca</label>
         </div>
         <div class="form-item">
           <select v-model="currentProduto.rating">

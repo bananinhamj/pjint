@@ -31,9 +31,8 @@ async function login() {
   <header>
     <nav>
       <div class="elemento-sombreado">
-        <RouterLink to="/home">Home</RouterLink>
+        <RouterLink to="/produtos">Home</RouterLink>
         <RouterLink to="/cadastro">Cadastro</RouterLink>
-        <RouterLink to="/produtos">Produtos</RouterLink>
         <a v-if="authStore.loggedIn" @click="authStore.logout()">Logout</a>
         <a v-else @click="showForm = true">Login</a>
       </div> 
@@ -125,5 +124,7 @@ nav a:first-of-type {
   background-color: #fff; /* Cor de fundo do elemento */
   border-radius: 8px; /* Borda arredondada (opcional) */
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Sombra */
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>
