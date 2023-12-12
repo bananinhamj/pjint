@@ -32,7 +32,7 @@ async function login() {
     <nav>
       <div class="elemento-sombreado">
         <RouterLink to="/home">Home</RouterLink>
-        <RouterLink to="/categoria">Categoria</RouterLink>
+        <RouterLink to="/cadastro">Cadastro</RouterLink>
         <RouterLink to="/produtos">Produtos</RouterLink>
         <a v-if="authStore.loggedIn" @click="authStore.logout()">Logout</a>
         <a v-else @click="showForm = true">Login</a>

@@ -24,17 +24,6 @@ onMounted(async () => {
       </div>
     </div>
   </div>
-    <div class="container">
-        <img class="cardproduto" src="" />
-        <div>
-            <div class="overlay">
-                <h4 class="Produto">aaaaaaaaa</h4>
-                <button>VER MAIS</button>
-<!--                 <router-link :to="UrlDoProduto(LinkProduto.id)">
-                </router-link> -->
-            </div>
-        </div>
-    </div>
 </template>
 
 

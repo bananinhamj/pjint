@@ -14,7 +14,7 @@ class CategoriaService {
     }
     return response.data
   }
-  async deleteGenre(categoria) {
+  async deleteCategoria(categoria) {
     const response = await api.delete(`/categoria/${categoria.id}/`)
     return response.data
   }
